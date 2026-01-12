@@ -1,4 +1,4 @@
-# StreakCode App 🚀
+# StreakCode 🚀🔥
 
 **StreakCode** is a mobile application designed to help developers track their daily coding consistency. Built with a focus on building habits, it features a "Streak" system that motivates users to code every day without breaking the chain.
 
@@ -81,14 +81,11 @@ During the development, several complex engineering challenges were solved:
 
 ## 📸 Screenshots
 
-| Login Page | Home Page | | Absent Page |
-|             |          |  |            |
-
-| Streak On | History Page | Calender Page |
-|          |              |            |
+![WhatsApp Image 2026-01-12 at 14 07 57](https://github.com/user-attachments/assets/0f4d6c1c-feee-41f7-b334-cec2afd6df09)
+![WhatsApp Image 2026-01-12 at 14 07 57 (1)](https://github.com/user-attachments/assets/7b05cdbb-0f3a-4ce2-9471-b284b1833db5)
 
 ---
 
-## 👨‍💻 Abedehakims
+## 👨‍💻 Author : Abedehakims
 
 Built with ❤️ as a portfolio project to demonstrate Fullstack Mobile Development capabilities.
