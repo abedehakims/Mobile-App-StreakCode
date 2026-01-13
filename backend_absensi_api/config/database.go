@@ -27,6 +27,7 @@ func DatabaseConnection() {
 	database, err := gorm.Open(mysql.Open(dsn), &gorm.Config{})
 
 	if err != nil {
+		fmt.Println("Detail Error DB:", err.Error())
 		panic("Koneksi ke Database gagal")
 	}
 	DB = database
