@@ -5,8 +5,14 @@ import 'services/notification_service.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
-  // Memulai notifikasi
-  await initializeDateFormatting('id_ID', null);
+  try {
+    await initializeDateFormatting('id_ID', null);
+    runApp(const MyApp());
+  } catch (e) {
+    print("Error dalam inisialisasi format tanggal: $e");
+    runApp(const MyApp());
+  }
+  // Memulai format penanggalan
   await NotificationService().init();
   // Meminta izin notifikasi jika Android 13+
   await NotificationService().requestPermission();

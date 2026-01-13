@@ -2,14 +2,16 @@ import 'package:http/http.dart' as http;
 import 'dart:convert';
 
 class ApiService {
-  static const String baseUrl = "http://10.0.2.2:3000";
+  static const String baseUrl = "http://192.168.1.8:3000";
 
   Future<Map<String, dynamic>> login(String nama) async {
-    final response = await http.post(
-      Uri.parse("$baseUrl/login"),
-      headers: {"Content-Type": "application/json"},
-      body: jsonEncode({"nama": nama}),
-    );
+    final response = await http
+        .post(
+          Uri.parse("$baseUrl/login"),
+          headers: {"Content-Type": "application/json"},
+          body: jsonEncode({"nama": nama}),
+        )
+        .timeout(const Duration(seconds: 5));
     return jsonDecode(response.body);
   }
 
