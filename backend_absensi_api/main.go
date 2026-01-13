@@ -4,6 +4,7 @@ import (
 	"backend_absensi_api/config"
 	"backend_absensi_api/controllers"
 	"log"
+	"os"
 
 	"github.com/gofiber/fiber/v2"
 	"github.com/gofiber/fiber/v2/middleware/cors"
@@ -17,5 +18,9 @@ func main() {
 	app.Post("/absen", controllers.SubmitAbsen)          // Untuk fitur 1, absensi
 	app.Get("/user/:id", controllers.GetUserData)        // Pemilihan user
 	app.Get("/histori/:user_id", controllers.GetHistori) // Untuk fitur 2, histori
-	log.Fatal(app.Listen("0.0.0.0:3000"))                // Port listener supaya dart bisa run di port ini
+	port := os.Getenv("PORT")                            // Mengambil port dari import os
+	if port == "" {
+		port = "3000" // Default port jika dilakukannya fallback
+	}
+	log.Fatal(app.Listen(":" + port)) // Port listener supaya dart bisa run di port ini
 }
