@@ -2,7 +2,8 @@ import 'package:http/http.dart' as http;
 import 'dart:convert';
 
 class ApiService {
-  static const String baseUrl = "http://192.168.1.8:3000";
+  static const String baseUrl =
+      "https://mobile-app-streakcode-production.up.railway.app";
 
   Future<Map<String, dynamic>> login(String nama) async {
     final response = await http
