@@ -23,6 +23,10 @@ func DatabaseConnection() {
 	dbPORT := os.Getenv("DB_PORT")
 	dbNAME := os.Getenv("DB_NAME")
 
+	fmt.Println("--- DEBUG VARIABEL ---")
+	fmt.Printf("User: [%s], Host: [%s], Port: [%s], DB: [%s]\n", dbUSER, dbHOST, dbPORT, dbNAME)
+	fmt.Println("-----------------------")
+
 	dsn := fmt.Sprintf("%s:%s@tcp(%s:%s)/%s?charset=utf8mb4&parseTime=True&loc=Local", dbUSER, dbPASS, dbHOST, dbPORT, dbNAME)
 	database, err := gorm.Open(mysql.Open(dsn), &gorm.Config{})
 
